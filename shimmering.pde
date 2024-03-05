@@ -12,9 +12,9 @@ Bee[][] hive;
 
 void setup() {
   surface.setResizable(true);
-  final int w = 2 * rows * r;
-  final int h = 2 * cols * r;
-  surface.setSize(w, h);
+  surface.setSize(2 * rows * r, 2 * cols * r);
+  smooth();
+  frameRate(10);
 
   //
   hive = new Bee[cols][rows];
@@ -48,19 +48,6 @@ void setup() {
 }
 
 void draw() {
-  //println("count = %d", count);
-  //for (int i = 0; i < cols; i++) {
-  //  for (int j = 0; j < rows; j++) {
-  //    if (hive[i][j].get_state() == State.ACTIVE) {
-  //      print("A");
-  //    } else if (hive[i][j].get_state() == State.REFRACTORY) {
-  //      print("o");
-  //    } else {
-  //      print(".");
-  //    }
-  //  }
-  //  println("");
-  //}
   for (int i = 0; i < cols; i++) {
     for (int j = 0; j < rows; j++) {
       int nx = 2 * j + 1;
@@ -70,10 +57,14 @@ void draw() {
       circle(r * nx, r * ny, 2 * r);
     }
   }
+  
+  if (frameCount <= 1000) {
+    saveFrame("frames/####.png");
+  }
   prepare();
   update();
   
-  delay(10);
+  //delay(10);
   count++;
 } 
 
