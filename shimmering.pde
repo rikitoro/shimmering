@@ -1,6 +1,6 @@
 
-int cols = 100;
-int rows = 100;
+int cols = 50;
+int rows = 50;
 
 int r = 5;
 
