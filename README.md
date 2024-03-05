@@ -1,4 +1,8 @@
-# Simulation of Honey bee shemmer
+# Simulation of Honey bee shemmering
+
+## demo
+
+<img src="demo.gif">
 
 ## refs
 - Navin Patel, Henri Huijberts, Kaspar Althoefer, Ketao Zhang, "Mathematical Tri-State Model for Bee Shimmering Propagation Dynamics", [arXiv:2401.14145](https://arxiv.org/abs/2401.14145)
