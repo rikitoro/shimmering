@@ -2,8 +2,8 @@
 class Bee {
   // state transition prob.
   final float p_AR = 0.6;
-  final float p_RI = 0.1;
-  final float p_IA = 0.001;
+  final float p_RI = 0.05;
+  final float p_IA = 0.0;
   final float p_T  = 0.4;
   final float p_W  = 0.9;
   
@@ -48,7 +48,9 @@ class Bee {
   }
 
   private void trial_from_I() {
-    // trial(p_W, State.ACTIVE);
+    if (this.wasp) {
+      trial(p_W, State.ACTIVE);
+    }
     for (Bee b : neighbers) {
       if (b.get_state() == State.ACTIVE) {
         trial(p_T, State.ACTIVE);

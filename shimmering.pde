@@ -1,6 +1,6 @@
 
-int cols = 50;
-int rows = 50;
+int cols = 100;
+int rows = 100;
 
 int r = 5;
 
@@ -23,13 +23,25 @@ void setup() {
       hive[i][j] = new Bee(State.INACTIVE, false); 
     }
   }
+  
+  // set Wasp
+  hive[0][rows/2].set_wasp(true);
+  
   // set neighbers
-  for (int i = 1; i < cols - 1; i++) {
-    for (int j = 1; j < rows - 1; j++) {
-      hive[i][j].add_neighber(hive[(i + 1 + cols) % cols][j]);
-      hive[i][j].add_neighber(hive[(i - 1 + cols) % cols][(j + 1 + rows) % rows]);
-      hive[i][j].add_neighber(hive[i][(j + 1 + rows) % rows]);
-      hive[i][j].add_neighber(hive[i][(j - 1 + rows) % rows]);      
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      if (i + 1 < cols) {
+        hive[i][j].add_neighber(hive[i + 1][j]);
+      }
+      if (0 <= i - 1) {
+        hive[i][j].add_neighber(hive[i - 1][j]);
+      }
+      if (j + 1 < rows) {
+        hive[i][j].add_neighber(hive[i][j + 1]);
+      }
+      if (0 <= j - 1) {
+        hive[i][j].add_neighber(hive[i][j - 1]);
+      }
     }
   }
   //
@@ -61,7 +73,7 @@ void draw() {
   prepare();
   update();
   
-  delay(20);
+  delay(10);
   count++;
 } 
 
