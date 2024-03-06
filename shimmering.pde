@@ -1,6 +1,6 @@
 
-int cols = 50;
-int rows = 50;
+int cols = 30;
+int rows = 30;
 
 int r = 5;
 
@@ -14,7 +14,7 @@ void setup() {
   surface.setResizable(true);
   surface.setSize(2 * rows * r, 2 * cols * r);
   //smooth();
-  //frameRate(20);
+  //frameRate(30);
 
   //
   hive = new Bee[cols][rows];
@@ -65,7 +65,7 @@ void draw() {
     }
   }
   
-  //if (frameCount <= 1500) {
+  //if (frameCount <= 1000) {
   //  saveFrame("frames/####.png");
   //}
   prepare();
