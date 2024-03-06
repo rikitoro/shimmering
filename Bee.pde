@@ -1,7 +1,7 @@
 
 class Bee {
   // state transition prob.
-  final float p_AR = 0.6;
+  final float p_AR = 0.4;
   final float p_RI = 0.05;
   final float p_IA = 0.0;
   final float p_T  = 0.4;
@@ -36,6 +36,10 @@ class Bee {
   // wasp here
   public void set_wasp(boolean wasp) {
     this.wasp = wasp;
+  }
+  
+  public boolean get_wasp() {
+    return this.wasp;
   }
   
   

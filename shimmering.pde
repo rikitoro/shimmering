@@ -14,7 +14,7 @@ void setup() {
   surface.setResizable(true);
   surface.setSize(2 * rows * r, 2 * cols * r);
   //smooth();
-  //frameRate(10);
+  //frameRate(20);
 
   //
   hive = new Bee[cols][rows];
@@ -25,7 +25,7 @@ void setup() {
   }
   
   // set Wasp
-  hive[0][rows/2].set_wasp(true);
+  hive[0][rows/4].set_wasp(true);
   
   // set neighbers
   for (int i = 0; i < cols; i++) {
@@ -52,13 +52,20 @@ void draw() {
     for (int j = 0; j < rows; j++) {
       int nx = 2 * j + 1;
       int ny = 2 * i + 1;
-      fill(beeColor(hive[i][j]));
+      Bee bee = hive[i][j];
+      
       noStroke();
-      circle(r * nx, r * ny, 2 * r);
+      if (bee.get_wasp()) {
+        fill(color(0, 0, 0));
+        circle(r * nx, r * ny, 2*r);
+      }
+      //
+      fill(beeColor(bee));
+      circle(r * nx, r * ny, 1.5 * r);
     }
   }
   
-  //if (frameCount <= 1000) {
+  //if (frameCount <= 1500) {
   //  saveFrame("frames/####.png");
   //}
   prepare();
