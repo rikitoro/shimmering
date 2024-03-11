@@ -2,8 +2,6 @@
 int count = 0;
 
 final int d = 10;
-final float COS60 = 0.5;
-final float SIN60 = sqrt(3.0)/2;
 
 Bee[][] bees;
 ArrayList<Bond> bonds;
@@ -14,10 +12,10 @@ void setup() {
   
   // randomSeed(3141);
   
-  
+ 
   // for gif animation
-  smooth();
-  frameRate(30);
+  //smooth();
+  //frameRate(30);
 
 
 
@@ -58,9 +56,9 @@ void draw() {
   drawWasp(NX/2, 0);
 
   // for gif animation
-  if (frameCount <= 1000) {
-    saveFrame("frames/####.png");
-  }
+  //if (frameCount <= 1000) {
+  //  saveFrame("frames/####.png");
+  //}
   
   bees[NX/2][0].threatened();
   transition();
