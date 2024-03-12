@@ -1,10 +1,10 @@
+// nest size
+final int NX = 50;
+final int NY = 40;
+
 // state transition prob.
-final float P_AR = 0.35;
+final float P_AR = 0.3;
 final float P_RI = 0.03;
 final float P_IA = 0.0;
 final float P_T  = 0.4;
-final float P_W  = 0.9;
-
-// nest size
-final int NX = 50;
-final int NY = 30;
+final float P_W  = 0.5;
