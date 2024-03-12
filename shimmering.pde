@@ -14,8 +14,8 @@ void setup() {
   
  
   // for gif animation
-  //smooth();
-  //frameRate(30);
+  smooth();
+  frameRate(30);
 
 
 
@@ -56,9 +56,9 @@ void draw() {
   drawWasp(NX/2, 0);
 
   // for gif animation
-  //if (frameCount <= 1000) {
-  //  saveFrame("frames/####.png");
-  //}
+  if (frameCount <= 1000) {
+    saveFrame("frames/####.png");
+  }
   
   bees[NX/2][0].threatened();
   transition();

@@ -10,11 +10,11 @@ class Bond {
   
   public void interact() {
     if (bee1.get_state() == State.ACTIVE && bee2.get_state() == State.INACTIVE) {
-      trial(P_T, State.INACTIVE, State.ACTIVE);
+      trial(P_T, State.REFRACTORY, State.ACTIVE);
     }
 
     if (bee1.get_state() == State.INACTIVE && bee2.get_state() == State.ACTIVE) {
-      trial(P_T, State.ACTIVE, State.INACTIVE);
+      trial(P_T, State.ACTIVE, State.REFRACTORY);
     }
     
   }

@@ -1,6 +1,6 @@
 // state transition prob.
-final float P_AR = 0.65;
-final float P_RI = 0.02;
+final float P_AR = 0.35;
+final float P_RI = 0.03;
 final float P_IA = 0.0;
 final float P_T  = 0.4;
 final float P_W  = 0.9;
