@@ -53,14 +53,14 @@ void draw() {
     }
   }
   
-  drawWasp(0, NY/2);
+  //drawWasp(0, NY/2);
 
   // for gif animation
   //if (frameCount <= 1000) {
   //  saveFrame("frames/####.png");
   //}
   
-  bees[0][NY/2].threatened();
+  //bees[0][NY/2].threatened();
   transition();
   update();
   
