@@ -1,4 +1,4 @@
-# Simulation of Honey bee shemmering
+# Simulation of Honey bee shimmering
 
 ## Demo
 
