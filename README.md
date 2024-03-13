@@ -16,6 +16,10 @@ flowchart LR
 I -->|p_IA| A
 A -->|p_AR| R
 R -->|p_RI| I
+
+style A fill:#ff4500
+style R fill:#ffff00
+style I fill:#C0C0C0
 ```
 
 ### Interaction between neighbors
@@ -32,6 +36,11 @@ flowchart LR
   int -.-> R1
   I2 --> int
   int --> A2
+
+  style A1 fill:#ff4500
+  style R1 fill:#ffff00
+  style I2 fill:#C0C0C0
+  style A2 fill:#ff4500
 ```
 
 ## refs
