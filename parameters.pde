@@ -1,5 +1,5 @@
 // nest size
-final int NX = 100;
+final int NX = 150;
 final int NY = 100;
 
 // state transition prob.
